@@ -52,7 +52,7 @@
                     "lookup": "properties.NAME",
                     "from":{
                         "data":{
-                            "url":"data/vdataNow.csv"
+                            "url":"Data/vdataNow.csv"
                         },
                         "key": "Country",
                         "fields": ["COVERAGE","Year"]
