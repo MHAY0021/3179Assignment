@@ -1,0 +1,56 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width":"container",
+    "height": 400,
+    "autosize":{
+        "type": "fit",
+        "contains": "padding"
+    },
+    "data": {
+      "url": "data/global-vaccination-coverage.csv"
+    },
+    "transform": [
+      {"filter": "datum.Entity == 'World'"}, 
+      {"fold": [
+          "BCG",
+          "HepB3",
+          "Hib3",
+          "IPV1",
+          "MCV1",
+          "PCV3",
+          "Pol3",
+          "RCV1",
+          "RotaC",
+          "YFV",
+          "DTP3"
+        ],
+        "as": ["Vaccine", "Coverage"]
+      }
+    ],
+    "mark": "line",
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "temporal",
+        "title": "Year"
+      },
+      "y": {
+        "field": "Coverage",
+        "type": "quantitative",
+        "title": "Vaccination Coverage (%)"
+      },
+      "color": {
+        "field": "Vaccine",
+        "type": "nominal",
+        "title": "Vaccine Type",
+        "legend": {"orient": "bottom", "title": "Vaccines","columns":6}
+      },
+      "tooltip": [
+        {"field": "Year", "type": "temporal", "title": "Year"},
+        {"field": "Vaccine", "type": "nominal", "title": "Vaccine"},
+        {"field": "Coverage", "type": "quantitative", "title": "Coverage (%)"}
+      ]
+    },
+    "title": "Global Vaccination Coverage for Various Vaccines"
+  }
+  

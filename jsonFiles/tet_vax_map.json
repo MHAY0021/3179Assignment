@@ -1,0 +1,83 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "projection": {"type":"equalEarth"},
+    "width":"container",
+    "height": 400,
+    "autosize":{
+        "type": "fit"
+    },
+    "layer":[
+        
+        {
+            "data": {
+              "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+              "format": {"type": "topojson", "feature": "oceans"}
+            },
+            "mark": {"type": "geoshape", "fill": "skyblue"}
+          },
+          {
+            "data": {
+              "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/WorldMapWithGraticules.topojson",
+              "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+            },
+            "mark": {"type": "geoshape", "fill": null, "stroke": "gray"}
+          },
+        {
+            "data": {
+            "url": "ne_110m.json",
+            "format": {"type":"topojson","feature":"ne_110m_admin_0_countries"}
+            },
+            "mark":{
+                "type":"geoshape",
+                "fill":"lightgrey",
+                "stroke":"black",
+                "strokeWidth":1
+            },
+            "encoding": {
+                "tooltip":[
+                    {"field":"properties.NAME","type":"nominal","title":"Country"},
+                    {"field":"","type":"nominal","title":"No Data"}
+                ]
+            }
+        },
+        {
+            "data": {
+                "url": "ne_110m.json",
+                "format": {"type":"topojson","feature":"ne_110m_admin_0_countries"}
+            },
+            "transform": [
+                
+                {
+                    "lookup": "properties.NAME",
+                    "from":{
+                        "data":{
+                            "url":"vdata.csv"
+                        },
+                        "key": "Country",
+                        "fields": ["COVERAGE","Year"]
+                    }
+                }
+            ],
+            "mark":{
+                "type": "geoshape",
+                "stroke":"black",
+                "strokeWidth":1
+        },
+            "encoding": {
+                "color":{
+                    "field":"COVERAGE",
+                    "type": "quantitative",
+                    "scale":{"type":"linear", "scheme":"greens"},
+                    "legend": { "title": "Coverage (%)" } 
+                },
+                "tooltip":[
+                    {"field":"properties.NAME","type":"nominal","title":"Country"},
+                    {"field":"COVERAGE","type":"quantitative","title":"%"},
+                    {"field":"Year","type": "nominal"}
+                ]
+            }
+        }
+
+    ]
+}
