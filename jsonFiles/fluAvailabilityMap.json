@@ -57,7 +57,7 @@
                         "domain": ["Yes", "No","No Data"],
                         "range": ["green", "orange", "lightgrey"]
                     },
-                    "legend": { "title": "Availability" } 
+                    "legend": { "title": "Availability", "orient": "bottom" } 
                 },
                 
                 "tooltip":[

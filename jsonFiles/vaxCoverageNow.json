@@ -52,7 +52,7 @@
                     "lookup": "properties.NAME",
                     "from":{
                         "data":{
-                            "url":"Data/vdataNow.csv"
+                            "url":"data/vdataNow.csv"
                         },
                         "key": "Country",
                         "fields": ["COVERAGE","Year"]
@@ -69,7 +69,7 @@
                     "field":"COVERAGE",
                     "type": "quantitative",
                     "scale":{"type":"linear", "scheme":"greens"},
-                    "legend": { "title": "Coverage (%)" } 
+                    "legend": { "title": "Coverage (%)" , "orient": "bottom" } 
                 },
                 "tooltip":[
                     {"field":"properties.NAME","type":"nominal","title":"Country"},

@@ -7,7 +7,7 @@
         "contains": "padding"
     },
     "data": {
-      "url": "Data/global-vaccination-coverage.csv"
+      "url": "data/global-vaccination-coverage.csv"
     },
     "transform": [
       {"filter": "datum.Entity == 'World'"}, 
@@ -51,6 +51,6 @@
         {"field": "Coverage", "type": "quantitative", "title": "Coverage (%)"}
       ]
     },
-    "title": "Global Vaccination Coverage for Various Vaccines"
+    "title": "Coverage for Various Vaccines"
   }
   
