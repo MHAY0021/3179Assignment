@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width":"container",
+  "height": 400,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "title": "Lives Saved through vaccinations",
+  "padding": { "left": 0, "right": 10, "top": 10, "bottom": 10 },
+  "data": {
+    "url": "Data/cumulative-lives-saved-vaccination.csv"
+  },
+  "transform": [
+    {
+      "calculate": "datum.Livessaved / 1000000",
+      "as": "Millions Saved"
+    }
+  ],
+  "mark": { "type": "area", "line": true },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "title": "Year"
+    },
+    "y": {
+      "field": "Millions Saved",
+      "type": "quantitative",
+      "stack": "zero",
+      "title": "Millions of Lives Saved"
+    },
+    "color": {
+      "field": "Entity",
+      "type": "nominal",
+      "title": "Region",
+      "legend": { "orient": "bottom", "columns": 2 }
+    },
+    "tooltip": [
+      { "field": "Entity", "type": "nominal", "title": "Region" },
+      { "field": "Year", "type": "temporal", "title": "Year" ,"timeUnit":"year"},
+      { "field": "Millions Saved", "type": "quantitative", "title": "Lives Saved (Millions)" }
+    ]
+  }
+}

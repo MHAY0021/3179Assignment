@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2 Matt</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="assignment.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <script src="vega_lite_vis.js"></script>
+    <script src="other/charts.js"></script>
+</head>
+<body class="p-5">
+    <div class="mainBody">
+        <h1>How do vaccinations around the world compare to Australia?</h1>
+        <div class="row" id="row1">
+            <!-- <div id="buffer"></div> -->
+            <div class = "small">
+                <p>
+                    Vaccinations train the immune system to fight off diseases without causing illness. They've eradicated smallpox and reduced diseases like polio and measles. Global organizations promote vaccines to protect vulnerable groups and lower healthcare costs. In low-income regions, vaccines prevent devastating outbreaks. Despite their success, misinformation fuels vaccine hesitancy, risking the return of controlled diseases. The COVID-19 pandemic underscored the importance of vaccinations in controlling outbreaks. Vaccines are essential for public health, preventing the spread of infectious diseases and saving lives worldwide. They are a critical tool in maintaining global health security.
+                </p>
+            </div>
+            <!-- <div id="buffer"></div> -->
+            <div class = "small">
+                <img src="other/vaxImage.png" alt="Drawing of a needle">
+            </div>
+            <div class="small" id="info">
+                <p><strong>Name</strong> Matthew Hayes</p>
+                <p><strong>ID</strong> 33114366</p>
+                <p><strong>Class</strong> 2pm Tuesday</p>
+                <p><strong>Tutor Name</strong> Joe Liu</p>
+                <p><strong>Unit</strong> FIT3179</p>
+                <p>Assignment 2</p>
+                <p>October 2024</p>
+            </div>
+        </div>
+
+        <div class="row" id="tog1">
+            <div class = "big" id="map_tetVax"></div>
+            <div class ="small">
+                <h4>Coverage of essential vaccinations</h4>
+                
+                <p>
+                    This map represents global coverage of essential vaccinations, showing the percentage of populations in different countries that have received key immunizations, such as those for measles, polio, and diphtheria. High vaccination coverage is essential for achieving herd immunity, which protects both individuals and vulnerable groups. Australia, shown with high coverage rates, <strong>compares favorably to much of the world</strong>, ranking alongside regions like North America and Europe in vaccination success. In contrast, parts of Africa and Asia lag behind due to limited healthcare access. Understanding these global patterns is crucial for targeting efforts to expand immunization and prevent disease outbreaks.
+                </p>
+            </div>
+        </div>
+        <div class="row" id="tog2">
+            <div class = "big" id="map_2023Cov"></div>
+            <div class ="small">
+                <h4>Coverage of essential vaccinations</h4>
+                
+                <p>
+                    This map represents global coverage of essential vaccinations, showing the percentage of populations in different countries that have received key immunizations, such as those for measles, polio, and diphtheria. High vaccination coverage is essential for achieving herd immunity, which protects both individuals and vulnerable groups. <strong>Australia</strong>, shown with high coverage rates, <strong>compares favorably to much of the world</strong>, ranking alongside regions like North America and Europe in vaccination success. In contrast, parts of Africa and Asia lag behind due to limited healthcare access. Understanding these global patterns is crucial for targeting efforts to expand immunization and prevent disease outbreaks.
+                </p>
+            </div>
+        </div>
+        <div class="row" id="row3">
+            
+            <div class ="small">
+                <h4>Effectiveness and Importance of vaccinations</h4>
+                <p>
+                    Distrust of vaccinations is a key challenge in fighting diseases. Countries like Australia tend to think vaccinations are effective, and hence think they’re important. Whereas countries like Russia and China are less convinced for both questions.<br><br>
+                    It is interesting to see that some countries such as Iran, have a large portion of their population who don’t think vaccinations are effective, however there are very few people who don’t think they’re important. This implies many people feel its important to go and get them without actually understanding why.
+                    <br>
+                    <br>
+                    <i>Try use the slider to see where smaller countries sit</i>
+
+                </p>
+            </div>
+            <div class = "big" id="intScat"></div>
+        </div>
+        <div class="row">
+            <div class = "big" id="mapFlu">
+
+            </div>
+            <div class ="small">
+                <h4>Flu Vaccination Availability</h4>
+                <p>
+                    In countries like Australia, getting a vaccination is as simple as visiting a local pharmacy and paying a nominal fee, typically around $10. However, this scenario is <strong>far</strong> from universal. In many parts of the world, particularly in large regions of central Africa and several countries in Asia, access to the flu vaccine is not as reliable. This lack of access is often due to a combination of factors including economic constraints, limited healthcare infrastructure, and logistical challenges related to vaccine distribution. While some strides have been made to address this, there is still a significant amount of work to be done to ensure that everyone has access to life-saving vaccines like the one for the flu.
+                </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class = "small" id="cover">
+
+            </div>
+            <div class="small">
+                <h4>We have made progress over the past 50 years!</h4>
+                <p>
+                    Shown on the left is the global uptake of a range of different vaccinations (as a % of children who receive all the required dosses), on the right we can see how many lives have been saved because of this.
+                    As continents like Africa and Asia continue to improve their vaccination programs, the world is going to see many many more people be saved!
+                    <br>
+                    <br>
+                    It is interesting to see that in 2020 the percentage of children getting vaccinated dropped slightly, this would be due to covid 19.
+
+                </p>
+            </div>
+            <div class ="small" id="livesSaved">
+
+            </div>
+        </div>
+        
+     </div>
+</body>
+</html>
