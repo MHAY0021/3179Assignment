@@ -7,7 +7,7 @@
         "contains": "padding"
     },
     "data": {
-      "url": "data/global-vaccination-coverage.csv"
+      "url": "Data/global-vaccination-coverage.csv"
     },
     "transform": [
       {"filter": "datum.Entity == 'World'"}, 
