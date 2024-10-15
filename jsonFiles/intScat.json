@@ -143,6 +143,93 @@
             {"field": "Population", "type": "quantitative", "format": ","}
           ]
         }
-      }
+      },
+      {
+
+        "mark": {
+        "type": "text",
+        "text": "Does not think vaccines are important for children",
+        "align": "left",
+        "dx": -180,
+        "dy": -40,
+        "fontSize": 12,
+        "fontWeight": "bold"
+        },
+        "encoding": {
+
+          "color": {"value": "black"},
+          "opacity": {
+            "condition": {
+              "test": "datum['Entity'] == 'Russia'",
+              "value": 1
+            },
+            "value": 0
+          },
+          "tooltip": [
+            {"field": "Entity", "type": "nominal","title":"Country"},
+            {"field": "Importance", "type": "quantitative", "format": ",","title":"Don't think it is important"},
+            {"field": "Effectiveness", "type": "quantitative", "format": ",","title":"Don't think it is effective"},
+            {"field": "Population", "type": "quantitative", "format": ","}
+          ]
+        }
+      },
+      {
+
+        "mark": {
+        "type": "text",
+        "text": "Does not think",
+        "align": "left",
+        "dx": -60,
+        "dy": 50,
+        "fontSize": 12,
+        "fontWeight": "bold"
+        },
+        "encoding": {
+
+          "color": {"value": "black"},
+          "opacity": {
+            "condition": {
+              "test": "datum['Entity'] == 'Bosnia and Herzegovina'",
+              "value": 1
+            },
+            "value": 0
+          },
+          "tooltip": [
+            {"field": "Entity", "type": "nominal","title":"Country"},
+            {"field": "Importance", "type": "quantitative", "format": ",","title":"Don't think it is important"},
+            {"field": "Effectiveness", "type": "quantitative", "format": ",","title":"Don't think it is effective"},
+            {"field": "Population", "type": "quantitative", "format": ","}
+          ]
+        }
+      },
+      {
+
+        "mark": {
+        "type": "text",
+        "text": "Vaccines work",
+        "align": "left",
+        "dx": -60,
+        "dy": 65,
+        "fontSize": 12,
+        "fontWeight": "bold"
+        },
+        "encoding": {
+
+          "color": {"value": "black"},
+          "opacity": {
+            "condition": {
+              "test": "datum['Entity'] == 'Bosnia and Herzegovina'",
+              "value": 1
+            },
+            "value": 0
+          },
+          "tooltip": [
+            {"field": "Entity", "type": "nominal","title":"Country"},
+            {"field": "Importance", "type": "quantitative", "format": ",","title":"Don't think it is important"},
+            {"field": "Effectiveness", "type": "quantitative", "format": ",","title":"Don't think it is effective"},
+            {"field": "Population", "type": "quantitative", "format": ","}
+          ]
+        }
+      }  
     ]
   }
